@@ -123,7 +123,7 @@ RunHarmony.Seurat <- function(
   )
 
   harmonyEmbed <- HarmonyMatrix(
-    embedding,
+    embedding[, dims.use],
     metavars_df,
     group.by.vars,
     FALSE,
@@ -216,7 +216,7 @@ RunHarmony.SingleCellExperiment <- function(
     }
 
     harmonyEmbed <- HarmonyMatrix(
-        pca_embedding,
+        pca_embedding[, dims.use],
         metavars_df,
         group.by.vars,
         FALSE,
